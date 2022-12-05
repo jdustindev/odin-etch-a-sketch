@@ -1,0 +1,25 @@
+#gridContainer {
+  width: 960px;
+  height: 960px;
+  min-height: 960px;
+  display: flex;
+  flex-direction: column;
+}
+
+.gridRow {
+  flex: 1 1 0;
+  display: flex;
+}
+.gridRow:last-child .gridCell {
+  border-bottom: 1px solid #000;
+}
+
+.gridCell {
+  flex: 1 1 0;
+  border: 0 solid #000;
+  border-left-width: 1px;
+  border-top-width: 1px;
+}
+.gridCell:last-child {
+  border-right: 1px solid #000;
+}
