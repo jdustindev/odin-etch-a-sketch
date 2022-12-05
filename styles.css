@@ -1,3 +1,8 @@
+#newGrid {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
 #gridContainer {
   width: 960px;
   height: 960px;
