@@ -17,6 +17,8 @@ function generateGrid(size) {
     for (let j=0; j < size; j++) {
       const cell = document.createElement('div');
       cell.classList.add('gridCell');
+      cell.darkness = 0;
+      console.log(cell.darkness);
 
       cell.addEventListener('mouseover', () => {
         colorCell(cell);
@@ -30,7 +32,11 @@ function generateGrid(size) {
 }
 
 function colorCell(cell) {
-  cell.style.backgroundColor = "#666666";
+  if (cell.darkness < 100) {
+    cell.darkness += 10;
+    console.log(cell.darkness);
+  }
+  cell.style.backgroundColor = `rgba(0, 0, 0, ${cell.darkness / 100})`;
 }
 
 generateGrid(16);
